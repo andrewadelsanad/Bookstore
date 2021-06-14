@@ -325,8 +325,8 @@ public class Driver {
         Connection myConnection = null;  //address of server
         Statement stmt = null;
 
-        String query = "insert into orders values( " + ord.getUser_name() + "," + ord.getISBN() + "," +
-                    ord.getOrder_date() + "," + ord.getQuantity() + "," + ord.getPrice() + ");";
+        String query = "insert into book_orders values( '" + ord.getUser_name() + "'" + "," + ord.getISBN() + "," +
+               "'pub'" + "," +  "'" + ord.getOrder_date() + "'" + "," + ord.getQuantity() + "," + ord.getPrice() + ");";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

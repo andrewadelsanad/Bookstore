@@ -137,7 +137,8 @@ public class ManagerView extends UserView {
             public void actionPerformed(ActionEvent actionEvent) {
                 if(bookCustomJTable.getTable().getSelectedRow() == -1) return;
                 Book selectedBook = bookTableModel.getCertainBook(bookCustomJTable.getTable().getSelectedRow());
-                Order order = new Order("",selectedBook.getISBN(),"","1",selectedBook.getPrice());
+                Order order = new Order("andrew",selectedBook.getISBN(),"2020-01-01","1",selectedBook.getPrice());
+                drive.placeOrder(order);
                 orderTableModel.newOrder(order);
             }
         });
